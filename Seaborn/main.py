@@ -1,11 +1,19 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-
+sns.set_theme(style="ticks")
 # Шаг 1: Загрузка и предобработка данных
 # Предположим, что данные находятся в файле "medical_data.csv" с указанной структурой.
 data = pd.read_csv('medical_data.csv')
 
+# sns.lineplot(x="age", y="ap_hi",
+#              hue="gender",
+#              data=data)
+# plt.title(
+#     'График рассеяния между возрастом и артериальным давлением верхнего уровня')
+# plt.xlabel('Возраст')
+# plt.ylabel('Артериальное давление верхнего уровня')
+# plt.show()
 # Шаг 2: Создание красивых графиков с помощью Seaborn
 # Гистограмма распределения возраста
 sns.histplot(data['age'], kde=True)
